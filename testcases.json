@@ -1,0 +1,15 @@
+[
+    {
+        "cardsBucketTitle": "To Do",
+        "cards": [
+            {
+                "title": "Implement user authentication",
+                "tags": ["Feature", "High Priority"]
+            },
+            {
+                "title": "Fix navigation bug",
+                "tags": ["Bug"]
+            }
+        ]
+    }
+]
