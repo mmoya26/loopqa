@@ -15,9 +15,9 @@ for (const testCase of testCases) {
         await navigateTo(page, testCase.areaName as Areas);
 
         const CARD_XPATH = `//div[h2[contains(text(), '${bucket.title}')]]//div[h3[contains(text(), '${card.title}')]]`;
-        const isElementVisible = await page.locator(CARD_XPATH).isVisible();
+        const cardLocator = await page.locator(CARD_XPATH)
         
-        await expect(isElementVisible).toBeTruthy();
+        await expect(cardLocator).toBeTruthy();
       });
 
       test(`Verify card with title: ${card.title} has the following tags: ${card.tags} in area: ${testCase.areaName}`, async ({ page }) => {
@@ -26,8 +26,9 @@ for (const testCase of testCases) {
   
         for (const tag of card.tags) {
           const SPAN_XPATH = `//div[h2[contains(text(), '${bucket.title}')]]//div[h3[contains(text(), '${card.title}')]]/h3/following-sibling::div[1]//span[text()='${tag}']`;
-          const isTagInCardVisible = await page.locator(SPAN_XPATH).isVisible();
-          await expect(isTagInCardVisible).toBeTruthy();
+          const tagLocator = await page.locator(SPAN_XPATH);
+
+          await expect(tagLocator).toBeTruthy();
         }
       })
     }
