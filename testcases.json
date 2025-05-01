@@ -1,14 +1,60 @@
 [
     {
-        "cardsBucketTitle": "To Do",
-        "cards": [
+        "areaName": "Web Application",
+        "buckets": [
             {
-                "title": "Implement user authentication",
-                "tags": ["Feature", "High Priority"]
+                "title": "To Do",
+                "cards": [
+                    {
+                        "title": "Implement user authentication",
+                        "tags": ["Feature", "High Priority"]
+                    },
+                    {
+                        "title": "Fix navigation bug",
+                        "tags": ["Bug"]
+                    }
+                ]
             },
             {
-                "title": "Fix navigation bug",
-                "tags": ["Bug"]
+                "title": "In Progress",
+                "cards": [
+                    {
+                        "title": "Design system updates",
+                        "tags": ["Design"]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "areaName": "Mobile Application",
+        "buckets": [
+            {
+                "title": "To Do",
+                "cards": [
+                    {
+                        "title": "Push notification system",
+                        "tags": ["Feature"]
+                    }
+                ]
+            },
+            {
+                "title": "In Progress",
+                "cards": [
+                    {
+                        "title": "Offline mode",
+                        "tags": ["Feature", "High Priority"]
+                    }
+                ]
+            },
+            {
+                "title": "Done",
+                "cards": [
+                    {
+                        "title": "App icon design",
+                        "tags": ["Design"]
+                    }
+                ]
             }
         ]
     }
