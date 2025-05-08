@@ -23,11 +23,11 @@ for (const testCase of testCases) {
       test(`Verify card with title: ${card.title} has the following tags: ${card.tags} in area: ${testCase.areaName}`, async ({ page }) => {
         await login(page, USERNAME, PASSWORD);
         await navigateTo(page, testCase.areaName as Areas);
-  
+
         for (const tag of card.tags) {
           const SPAN_XPATH = `//div[h2[contains(text(), '${bucket.title}')]]//div[h3[contains(text(), '${card.title}')]]/h3/following-sibling::div[1]//span[text()='${tag}']`;
-          const tagLocator = await page.locator(SPAN_XPATH);
-
+          const tagLocator = await page.locator(SPAN_XPATH).isVisible();
+          
           await expect(tagLocator).toBeTruthy();
         }
       })
